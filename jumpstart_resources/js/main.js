@@ -1,12 +1,12 @@
 $(document).ready(function(){
   $('.carousel').slick({
-    slideToScroll: 1;
+    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed:4000;
-    arrows: false;
-    draggable: false;
-    pauseOnFocus: false;
-    pauseOnHover: false;
+    autoplaySpeed: 4000,
+    arrows: false,
+    draggable: false,
+    pauseOnFocus: false,
+    pauseOnHover: false
   });
 
   var lastScrollTop = 0;
@@ -18,6 +18,7 @@ $(document).ready(function(){
       lastScrollTop = scrollTop;
     } else if (lastScrollTop - scrollTop > 50) {
       $('.navbar').animate({top: '0px'}, 150);
+      lastScrollTop = scrollTop;
     }
   });
 });
